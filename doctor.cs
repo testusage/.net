@@ -14,16 +14,10 @@ namespace ConsoleApp3
             //Open conn
             conn.Open();
 
-            //Insert
-            String query = "insert into doctor (DoctorID , DoctorName , Department , Fees) Values(@DoctorID , @DoctorName , @Department , @Fees)";
-            SqlCommand command1 = new SqlCommand(query, conn);
-
-            command1.Parameters.Add("@DoctorId",16);
-            command1.Parameters.Add("@DoctorName", "D");
-            command1.Parameters.Add("@Department", "ECE");
-            command1.Parameters.Add("@Fees", 7000);
-
-            command1.ExecuteNonQuery();
+            //Delete
+            String query3 = "delete from doctor where DoctorID='13'";
+            SqlCommand command3 = new SqlCommand(query3,conn);
+            command3.ExecuteNonQuery();
 
             //Select
             SqlCommand cmd = new SqlCommand("select * from doctor",conn);
@@ -47,6 +41,24 @@ namespace ConsoleApp3
         }
     }
 }
+
+
+//Insert
+/*String query = "insert into doctor (DoctorID , DoctorName , Department , Fees) Values(@DoctorID , @DoctorName , @Department , @Fees)";
+SqlCommand command1 = new SqlCommand(query, conn);
+
+command1.Parameters.Add("@DoctorId", 16);
+command1.Parameters.Add("@DoctorName", "D");
+command1.Parameters.Add("@Department", "ECE");
+command1.Parameters.Add("@Fees", 7000);
+
+command1.ExecuteNonQuery();*/
+
+
+//Update
+/*String query2 = "update doctor set DoctorName = 'FaizKhan' where DoctorID='10'";
+SqlCommand command2 = new SqlCommand(query2, conn);
+command2.ExecuteNonQuery();*/
 
 -------------------------------------------------------
 
