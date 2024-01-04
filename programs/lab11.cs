@@ -1,3 +1,17 @@
+// In the AppConfig file, enter the connection string, to establish the connection to required database
+// (for the data source, give the server name of your computer). Data source and initial catalog are 
+// your server name and database respectively, so change them as per your system config and the db 
+// name that you created.
+//  <connectionStrings>
+// <add name="BlogDbContext" connectionString="data source= DESKTOP1NDC7IR; initial catalog=UNIVERSITY_ONE;integrated security=SSPI"
+// providerName="System.Data.SqlClient"/>
+ 
+// </connectionStrings>
+// enable-migrations
+// add-migration CreatePost
+// update-database
+
+
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
